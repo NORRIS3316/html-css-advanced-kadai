@@ -1,1 +1,124 @@
+/* PC、スマホ共通スタイル */
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+#main-visual > img {
+  width: 100%;
+}
+
+/* ================
+PC用のスタイル 
+================ */
+@media screen and (min-width: 768px) {
+  /* 横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    text-align: right;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc > a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #nav-pc > a:link,
+  #nav-pc > a:visited {
+    color: #0d0d0d;
+  }
+
+  #nav-pc > a:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+
+  #nav-pc > a:active {
+    color: #0d0d0d;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-pc a {
+  margin: 0 10px;
+}
+
+#menu-sp {
+  display: none;
+}
+
+#nav-sp {
+  display: none;
+  flex-direction: column;
+}
+
+#nav-sp a {
+  margin: 10px 0;
+}
+
+/* =================
+スマホ用のスタイル
+================= */
+@media (max-width: 768px) {
+  #nav-pc {
+    display: none;
+  }
+
+  #menu-sp {
+    display: block;
+  }
+
+  #nav-sp {
+    display: none;
+    position: fixed; /* スクロールしても固定される */
+    top: 0;
+    right: 0;
+    width: 80%; /* メニューの幅を調整 */
+    height: 100%;
+    background-color: black;
+    padding: 20px;
+    z-index: 100;
+    overflow-y: auto; /* 縦スクロールを有効に */
+    box-sizing: border-box;
+  }
+
+  #nav-sp a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0;
+  }
+
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+  }
+}
+
 
